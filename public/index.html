@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Exchange | Cryptocurrency</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body class="text-myDarkText box-border overflow-hidden overflow-x-hidden overflow-y-hidden font-[arial]">
+    <!-- Header section -->
+    <section>
+        <!-- Navbar  -->
+        <nav class="relative px-2 py-4 h-[64px] box-border md:px-4 ">
+            <!-- Flex container  -->
+            <div class="flex flex-row justify-between mx-2 items-center">
+                <!-- Logo  -->
+                <div class="">
+                    <a href="#"> <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 5120 1024" class="css-4fx19t" width="120" height="24">
+                            <path
+                                d="M230.997333 512L116.053333 626.986667 0 512l116.010667-116.010667L230.997333 512zM512 230.997333l197.973333 197.973334 116.053334-115.968L512 0 197.973333 314.026667l116.053334 115.968L512 230.997333z m395.989333 164.992L793.002667 512l116.010666 116.010667L1024.981333 512l-116.992-116.010667zM512 793.002667l-197.973333-198.997334-116.053334 116.010667L512 1024l314.026667-314.026667-116.053334-115.968L512 793.002667z m0-165.973334l116.010667-116.053333L512 396.032 395.989333 512 512 626.986667z m1220.010667 11.946667v-1.962667c0-75.008-40.021333-113.024-105.002667-138.026666 39.978667-21.973333 73.984-58.026667 73.984-121.002667v-1.962667c0-88.021333-70.997333-145.024-185.002667-145.024h-260.992v561.024h267.008c126.976 0.981333 210.005333-51.029333 210.005334-153.002666z m-154.026667-239.957333c0 41.984-34.005333 58.965333-89.002667 58.965333h-113.962666V338.986667h121.984c52.010667 0 80.981333 20.992 80.981333 58.026666v2.005334z m31.018667 224c0 41.984-32.981333 61.013333-87.04 61.013333h-146.944v-123.050667h142.976c63.018667 0 91.008 23.04 91.008 61.013334v1.024z m381.994666 169.984V230.997333h-123.989333v561.024h123.989333v0.981334z m664.021334 0V230.997333h-122.026667v346.026667l-262.997333-346.026667h-114.005334v561.024h122.026667v-356.010666l272 356.992h104.96z m683.946666 0L3098.026667 228.010667h-113.962667l-241.024 564.992h127.018667l50.986666-125.994667h237.013334l50.986666 125.994667h130.005334z m-224.981333-235.008h-148.992l75.008-181.973334 73.984 181.973334z m814.037333 235.008V230.997333h-122.026666v346.026667l-262.997334-346.026667h-114.005333v561.024h122.026667v-356.010666l272 356.992h104.96z m636.970667-91.008l-78.976-78.976c-44.032 39.978667-83.029333 65.962667-148.010667 65.962666-96 0-162.986667-80-162.986666-176v-2.986666c0-96 67.968-174.976 162.986666-174.976 55.978667 0 100.010667 23.978667 144 62.976l78.976-91.008c-51.968-50.986667-114.986667-86.997333-220.970666-86.997334-171.989333 0-292.992 130.986667-292.992 290.005334V512c0 160.981333 122.965333 288.981333 288 288.981333 107.989333 1.024 171.989333-36.992 229.973333-98.986666z m527.018667 91.008v-109.994667h-305.024v-118.016h265.002666v-109.994667h-265.002666V340.992h301.013333V230.997333h-422.997333v561.024h427.008v0.981334z"
+                                p-id="2935" fill="#F0B90B"></path>
+                        </svg>
+                </div>
+
+                <!-- Menu items left  -->
+                <div class="hidden flex-row space-x-2 items-end self-center md:flex box-border">
+                    <!-- Language -->
+                    <div class="text-sm">
+                        <p class="hover:text-myGold cursor-pointer">English</p>
+                    </div>
+
+                    <div class="font-thin text-sm">
+                        |
+                    </div>
+                    <!-- Moon Icon  -->
+                    <div>
+                        <i class="fa fa-moon-o hover:text-myGold cursor-pointer"></i>
+                    </div>
+                </div>
+                <!-- Hamburger -->
+                <div class="flex md:hidden cursor-pointer box-border" id="menu-btn">
+                    <span><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" class="css-mykl4n" width="24" height="24">
+                            <defs>
+                                <symbol viewBox="0 0 24 24" id="menu-hamburger-f">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M4 4H20V7H4V4ZM4 10.5H20V13.5H4V10.5ZM20 17H4V20H20V17Z" fill="#1E2329">
+                                    </path>
+                                </symbol>
+                            </defs>
+                            <g fill="#1E2329">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4 4H20V7H4V4ZM4 10.5H20V13.5H4V10.5ZM20 17H4V20H20V17Z" fill="#1E2329"></path>
+                            </g>
+                        </svg></i></span>
+                </div>
+            </div>
+            <!-- Side menu -->
+            <div class="absolute flex-col bg-myWhite h-screen top-0 right-0 trans w-0 overflow-x-hidden overflow-y-hidden z-[999] md:hidden"
+                id="side-menu">
+                <div class="flex justify-end px-4 py-4 text-myGreySvg cursor-pointer" id="close-btn"><svg
+                        xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" id="mobile_header_menu_burger_close" class="css-1sk755i" width="24"
+                        height="24">
+                        <defs>
+                            <symbol viewBox="0 0 24 24" id="close-f">
+                                <path
+                                    d="M6.69806 4.57538L4.57674 6.6967L9.88004 12L4.57674 17.3033L6.69806 19.4246L12.0014 14.1213L17.3047 19.4246L19.426 17.3033L14.1227 12L19.426 6.6967L17.3047 4.57538L12.0014 9.87868L6.69806 4.57538Z"
+                                    fill="#1E2329"></path>
+                            </symbol>
+                        </defs>
+                        <g fill="#707A8A">
+                            <path
+                                d="M6.69806 4.57538L4.57674 6.6967L9.88004 12L4.57674 17.3033L6.69806 19.4246L12.0014 14.1213L17.3047 19.4246L19.426 17.3033L14.1227 12L19.426 6.6967L17.3047 4.57538L12.0014 9.87868L6.69806 4.57538Z"
+                                fill="#1E2329"></path>
+                        </g>
+                    </svg></a>
+                </div>
+                <div class="flex px-4 py-4 cursor-pointer">
+                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" class="css-mykl4n text-myGreySvg" width="25" height="24">
+                        <defs>
+                            <symbol viewBox="0 0 25 24" id="logo">
+                                <path
+                                    d="M5.41406 12L2.71875 14.6953L0 12L2.71875 9.28125L5.41406 12ZM12 5.41406L16.6406 10.0547L19.3594 7.33594L12 0L4.64062 7.35938L7.35938 10.0781L12 5.41406ZM21.2812 9.28125L18.5859 12L21.3047 14.7188L24.0234 12L21.2812 9.28125ZM12 18.5859L7.35938 13.9219L4.64062 16.6406L12 24L19.3594 16.6406L16.6406 13.9219L12 18.5859ZM12 14.6953L14.7188 11.9766L12 9.28125L9.28125 12L12 14.6953Z"
+                                    fill="#1E2329"></path>
+                            </symbol>
+                        </defs>
+                        <g fill="#707A8A">
+                            <path
+                                d="M5.41406 12L2.71875 14.6953L0 12L2.71875 9.28125L5.41406 12ZM12 5.41406L16.6406 10.0547L19.3594 7.33594L12 0L4.64062 7.35938L7.35938 10.0781L12 5.41406ZM21.2812 9.28125L18.5859 12L21.3047 14.7188L24.0234 12L21.2812 9.28125ZM12 18.5859L7.35938 13.9219L4.64062 16.6406L12 24L19.3594 16.6406L16.6406 13.9219L12 18.5859ZM12 14.6953L14.7188 11.9766L12 9.28125L9.28125 12L12 14.6953Z"
+                                fill="#1E2329" class="ml-2"></path>
+                        </g>
+                    </svg> <span class="ml-2"> Theme</span>
+                </div>
+                <div class="flex px-4 py-4 cursor-pointer" onfocus="glow">
+                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" class="css-mykl4n text-myGreySvg" width="24" height="24">
+                        <defs>
+                            <symbol viewBox="0 0 24 24" id="language-f">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M15.2307 20.4027C18.2316 19.2481 20.4577 16.5321 20.9137 13.25H16.9718C16.8248 16.1102 16.1791 18.638 15.2307 20.4027ZM14.473 13.25C14.2952 17.3518 13.2556 20.5 11.9998 20.5C10.744 20.5 9.70447 17.3518 9.52667 13.25H14.473ZM14.473 10.75H9.52667C9.70447 6.64821 10.744 3.5 11.9998 3.5C13.2556 3.5 14.2952 6.64821 14.473 10.75ZM16.9718 10.75H20.9137C20.4577 7.46786 18.2316 4.75191 15.2307 3.59731C16.1791 5.36198 16.8248 7.88979 16.9718 10.75ZM7.03566 10.75C7.18282 7.88774 7.82928 5.35836 8.77882 3.59353C5.77291 4.74598 3.54249 7.46427 3.08594 10.75H7.03566ZM7.03566 13.25H3.08594C3.54249 16.5357 5.77291 19.254 8.77882 20.4065C7.82928 18.6416 7.18282 16.1123 7.03566 13.25Z"
+                                    fill="#1E2329"></path>
+                            </symbol>
+                        </defs>
+                        <g fill="#707A8A">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M15.2307 20.4027C18.2316 19.2481 20.4577 16.5321 20.9137 13.25H16.9718C16.8248 16.1102 16.1791 18.638 15.2307 20.4027ZM14.473 13.25C14.2952 17.3518 13.2556 20.5 11.9998 20.5C10.744 20.5 9.70447 17.3518 9.52667 13.25H14.473ZM14.473 10.75H9.52667C9.70447 6.64821 10.744 3.5 11.9998 3.5C13.2556 3.5 14.2952 6.64821 14.473 10.75ZM16.9718 10.75H20.9137C20.4577 7.46786 18.2316 4.75191 15.2307 3.59731C16.1791 5.36198 16.8248 7.88979 16.9718 10.75ZM7.03566 10.75C7.18282 7.88774 7.82928 5.35836 8.77882 3.59353C5.77291 4.74598 3.54249 7.46427 3.08594 10.75H7.03566ZM7.03566 13.25H3.08594C3.54249 16.5357 5.77291 19.254 8.77882 20.4065C7.82928 18.6416 7.18282 16.1123 7.03566 13.25Z"
+                                fill="#1E2329" class="ml-2"></path>
+                        </g>
+                    </svg>
+                    <span class="ml-2">English</span>
+                </div>
+            </div>
+        </nav>
+        <!-- URl verification -->
+        <div class="text-center text-sm bg-myRedLight box-border w-full">
+            <p class="py-2 font-semibold text-xs "> <span class=""><i class="fa fa-lock fa-lg text-myGreenLink"
+                        aria-hidden="true"></i></span></i>
+                URL verification: <span class="font-normal"><span class="text-myGreenLink">https://</span>
+                    accounts.binance.com </span></p>
+        </div>
+    </section>
+    <!-- Account details section -->
+    <section>
+        <!-- Heading container -->
+        <div
+            class="flex-row mt-6 mb-8 box-border mx-6 w-full md:mt-16 md:mb-10 md:ml-3 lg:mt-[128px] lg:justify-center lg:hidden">
+            <!-- Heading  -->
+            <h1 class="text-2xl font-semibold md:text-[32px] flex text-left">
+                Binance Login</h1>
+
+        </div>
+
+        <!-- Input container  -->
+        <div class="flex flex-row w-full box-border">
+
+
+            <div class="flex flex-col w-full px-4 box-border">
+
+                <!-- Form  -->
+                <div class="flex flex-row w-full box-border lg:justify-center">
+                    <div class="flex flex-col w-full md:w-1/2 box-border md:max-w-[352px] md:ml-6 lg:max-w-[384px]">
+                        <div class="hidden flex-row mt-[128px] mb-10 box-border w-full lg:flex">
+                            <!-- Heading  -->
+                            <h1 class="text-2xl font-semibold md:text-[32px] flex text-left">
+                                Binance Login</h1>
+
+                        </div>
+                        <form action="">
+                            <!-- Email field -->
+                            <div class="flex flex-col mb-6 tab-content" id="email">
+                                <label for="Email" class="block mb-1 text-sm">Email / Phone Number</label>
+                                <div class="flex flex-row">
+                                    <select name="" id="select-country"
+                                        class="rounded-md h-12 bg-myWhite box-border border text-sm border-myGreyShade focus:outline-none focus:border-myGold hover:border-myGold w-1/5 mr-2 hidden">
+                                        <option value="nig">+234</option>
+                                    </select>
+                                    <input type="text" name="" id="user-input"
+                                        class="rounded-md h-12 border box-border text-sm border-myGreyShade focus:outline-none focus:border-myGold hover:border-myGold w-full px-4 py-2 mx-auto"
+                                        onkeyup="textValidation()">
+                                </div>
+                                <label for="" class="mt-1 box-border font-normal text-sm text-myRedValidation hidden"
+                                    id="validate">Please enter a valid email or phone number</label>
+                            </div>
+                            <!-- Phone field  -->
+                            <!-- <div class=" flex-col mb-6 tab-content" id="phone">
+                                <label for="phone" class="block mb-1">Phone</label>
+                                <div class="flex flex-row">
+                                    <select name="" id=""
+                                        class="rounded-md h-12 bg-myWhite box-border border text-sm border-myGreyShade focus:outline-none focus:border-myGold hover:border-myGold w-1/5 mr-2">
+                                        <option value="nig">+234</option>
+                                    </select>
+                                    <input type="text" name="" id="phone"
+                                        class="rounded-md h-12 box-border border text-sm border-myGreyShade focus:outline-none focus:border-myGold hover:border-myGold w-full px-4 py-2">
+                                </div>
+                            </div> -->
+                            <!-- Password field  -->
+                            <!-- <div class="flex flex-col mb-6"> -->
+                            <!-- <label for="password" class="block mb-1">Password</label>
+                            <input type="password" name="" id="password"
+                                class="rounded-md h-12 box-border border text-sm border-myGreyShade focus:outline-none focus:border-myGold hover:border-myGold w-full px-4 py-2"> -->
+                            <!-- </div> -->
+                            <!-- Button  -->
+                            <div>
+                                <input type="button"
+                                    class="rounded-md h-12 box-border bg-myGoldButton mx-auto w-full font-semibold focus:bg-myYellowishGold hover:bg-myYellowishGold "
+                                    onclick="validateBtn()" value="Next"></input>
+                            </div>
+                        </form>
+                        <div class="flex flex-col w-full py-4">
+                            <div class="flex items-center">
+                                <!-- The left line -->
+                                <div class="flex-grow h-px bg-myGreyShade"></div>
+
+                                <!-- Your text here -->
+                                <span class="flex-shrink text-sn text-myGreyMid font-semibold mx-8">or continue
+                                    with</span>
+
+                                <!-- The right line -->
+                                <div class="flex-grow h-px bg-myGreyShade"></div>
+                            </div>
+                            <!-- Apple or Google sigin in options -->
+                            <div class="flex flex-row justify-between font-medium pt-4">
+                                <div
+                                    class="flex justify-center items-center h-12 bg-myGreyShade w-1/2 mr-2 rounded-md cursor-pointer">
+                                    <h2 class="text-center "><i class="fa fa-google" aria-hidden="true"></i> Google</h2>
+                                </div>
+                                <div
+                                    class="flex justify-center items-center h-12 bg-myGreyShade w-1/2 ml-2 rounded-md cursor-pointer">
+                                    <h2 class="text-center"><i class="fa fa-apple" aria-hidden="true"></i> Apple</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Forget password or sigin up button -->
+                        <div class="flex flex-col space-y-5 mt-4 text-sm font-medium text-myGoldLinkText">
+                            <!-- <a href="#" class="hover:underline hover:text-myGoldButton"> Forgot password?</a> -->
+                            <a href="#" class="hover:underline hover:text-myGoldButton"> Create a Binance Account</a>
+                        </div>
+                    </div>
+                    <div
+                        class="hidden flex-col  justify-center items-center -mt-14 md:flex md:w-1/2 md:max-w-[212px] md:ml-[86px] lg:max-w-[250px] lg:mt-[138px]">
+                        <div class="bg-myGreyImgbackground w-44 h-44 rounded-md box-border -mt-4">
+                            <img src="../src/img/QR code.png" alt="" class="mx-auto py-2">
+                        </div>
+                        <div class="text-center box-border">
+                            <h2 class="pt-6 text-base font-medium"> Log in with QR code</h2>
+
+                            <p class="text-sm mt-4 text-myDarkFooterText font-normal leading-5">Scan this code with the
+                                <a href="#" class="leadin  text-myGoldLinkText hover:underline hover:text-myGoldButton">
+                                    Binance
+                                    mobile app</a> to log in instantly
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer section -->
+    <footer>
+        <div class="absolute bottom-0 text-center w-full">
+            <div class="flex flex-row box-border text-xs justify-center text-myDarkFooterText font-normal">
+                <div class="px-4 py-3">&copy; 2017 - 2022 Binance.com. All rights reserved</div>
+                <div class="hover:text-myDarkText cursor-pointer px-4 py-3 font-normal"> Cookie Preferences</div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- Pop up select menu -->
+    <section class="hidden">
+
+        <div class="relative px-6 w-full rounded-lg bg-myGold mx-1 box-border">
+            <div class="flex flex-row justify-between box-border">
+                <h1 class="flex flex-col justify-center text-xl">Select area code</h1>
+                <div class=" px-4 py-4 text-myGreySvg cursor-pointer" id="close-btn"><svg
+                        xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" id="mobile_header_menu_burger_close" class="css-1sk755i" width="24"
+                        height="24">
+                        <defs>
+                            <symbol viewBox="0 0 24 24" id="close-f">
+                                <path
+                                    d="M6.69806 4.57538L4.57674 6.6967L9.88004 12L4.57674 17.3033L6.69806 19.4246L12.0014 14.1213L17.3047 19.4246L19.426 17.3033L14.1227 12L19.426 6.6967L17.3047 4.57538L12.0014 9.87868L6.69806 4.57538Z"
+                                    fill="#1E2329"></path>
+                            </symbol>
+                        </defs>
+                        <g fill="#707A8A">
+                            <path
+                                d="M6.69806 4.57538L4.57674 6.6967L9.88004 12L4.57674 17.3033L6.69806 19.4246L12.0014 14.1213L17.3047 19.4246L19.426 17.3033L14.1227 12L19.426 6.6967L17.3047 4.57538L12.0014 9.87868L6.69806 4.57538Z"
+                                fill="#1E2329"></path>
+                        </g>
+                    </svg></a>
+                </div>
+            </div>
+            <div class="px-2">
+                <input type="text" name="" id=""
+                    class="rounded-md h-12 border box-border text-sm border-myGreyShade focus:outline-none focus:border-myGold hover:border-myGold w-full px-4 py-1 mx-auto"
+                    placeholder="Search">
+            </div>
+
+            <div class="flex flex-row justify-between px-6 py-8">
+                <div>
+                    <h1>Andora</h1>
+                </div>
+                <div>
+                    <h1>+376</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Overlay -->
+    </section>
+    <div class="fixed hidden top-0 left-0 right-0 bottom-0 w-screen h-screen bg-myGreyOverlay md:hidden" id="overlay" onclick=""></div>
+    <script src="../src/js/script.js"></script>
+    
+</body>
