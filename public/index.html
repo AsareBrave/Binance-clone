@@ -46,7 +46,7 @@
                 <!-- Hamburger -->
                 <div class="flex md:hidden cursor-pointer box-border" id="menu-btn">
                     <span><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
-                            fill="currentColor" class="css-mykl4n" width="24" height="24">
+                            class="css-mykl4n" width="24" height="24">
                             <defs>
                                 <symbol viewBox="0 0 24 24" id="menu-hamburger-f">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -82,7 +82,7 @@
                         </g>
                     </svg></a>
                 </div>
-                <div class="flex px-4 py-4 cursor-pointer">
+                <div class="flex px-4 py-4 cursor-pointer hover:bg-myGreyOverlay hover:text-myGoldButton">
                     <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor" class="css-mykl4n text-myGreySvg" width="25" height="24">
                         <defs>
@@ -255,9 +255,9 @@
 
     </footer>
     <!-- Pop up select menu -->
-    <section class="hidden">
+    <section class="">
 
-        <div class="relative px-6 w-full rounded-lg bg-myGold mx-1 box-border">
+        <div class="absolute px-6 w-full rounded-lg bg-myGold mx-1 box-border top-1/2">
             <div class="flex flex-row justify-between box-border">
                 <h1 class="flex flex-col justify-center text-xl">Select area code</h1>
                 <div class=" px-4 py-4 text-myGreySvg cursor-pointer" id="close-btn"><svg
@@ -285,9 +285,39 @@
                     placeholder="Search">
             </div>
 
-            <div class="flex flex-row justify-between px-6 py-8">
+            <div class="flex flex-row justify-between px-2 py-2">
+                <div class="flex items-center">
+                    <div class="rounded-full"><img src="../src/img/flag-of-Afghanistan.png" alt=""
+                            class="rounded-full h-8 w-8"></div>
+                    <h1 class="pl-2">Andora</h1>
+                </div>
                 <div>
-                    <h1>Andora</h1>
+                    <h1>+376</h1>
+                </div>
+            </div>
+            <div class="flex flex-row justify-between px-2 my-2">
+                <div class="flex items-center">
+                    <div class="rounded-full"><img src="../src/img/flag-of-Afghanistan.png" alt=""
+                            class="rounded-full h-8 w-8"></div>
+                    <h1 class="pl-2">Andora</h1>
+                </div>
+                <div>
+                    <h1>+376</h1>
+                </div>
+            </div><div class="flex flex-row justify-between px-2 my-2">
+                <div class="flex items-center">
+                    <div class="rounded-full"><img src="../src/img/flag-of-Afghanistan.png" alt=""
+                            class="rounded-full h-8 w-8"></div>
+                    <h1 class="pl-2">Andora</h1>
+                </div>
+                <div>
+                    <h1>+376</h1>
+                </div>
+            </div><div class="flex flex-row justify-between px-2 my-2">
+                <div class="flex items-center">
+                    <div class="rounded-full"><img src="../src/img/flag-of-Afghanistan.png" alt=""
+                            class="rounded-full h-8 w-8"></div>
+                    <h1 class="pl-2">Andora</h1>
                 </div>
                 <div>
                     <h1>+376</h1>
@@ -297,7 +327,9 @@
 
         <!-- Overlay -->
     </section>
-    <div class="fixed hidden top-0 left-0 right-0 bottom-0 w-screen h-screen bg-myGreyOverlay md:hidden" id="overlay" onclick=""></div>
+    <div class="fixed hidden top-0 left-0 right-0 bottom-0 w-screen h-screen bg-myGreyOverlay" id="overlay"
+        onclick="sideMenuHide()">
+    </div>
     <script src="../src/js/script.js"></script>
-    
+
 </body>

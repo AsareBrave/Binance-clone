@@ -119,3 +119,8 @@ function loadHiddenInput(){
    document.getElementById('user-identity2').innerHTML=localStorage.getItem('user-input')
 
 }
+function sideMenuHide() {
+    menu.classList.toggle('sidemenu')
+    menu.classList.toggle('w-0')
+    overlay.classList.replace('block', 'hidden')
+}

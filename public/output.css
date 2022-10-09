@@ -562,6 +562,12 @@ video {
 .left-0 {
   left: 0px;
 }
+.top-52 {
+  top: 13rem;
+}
+.top-1\/2 {
+  top: 50%;
+}
 .z-\[999\] {
   z-index: 999;
 }
@@ -584,6 +590,10 @@ video {
 .mx-1 {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
+}
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .ml-2 {
   margin-left: 0.5rem;
@@ -648,6 +658,9 @@ video {
 .h-44 {
   height: 11rem;
 }
+.h-8 {
+  height: 2rem;
+}
 .w-0 {
   width: 0px;
 }
@@ -665,6 +678,9 @@ video {
 }
 .w-screen {
   width: 100vw;
+}
+.w-8 {
+  width: 2rem;
 }
 .flex-shrink {
   flex-shrink: 1;
@@ -724,6 +740,12 @@ video {
 .rounded-lg {
   border-radius: 0.5rem;
 }
+.rounded-full {
+  border-radius: 9999px;
+}
+.rounded {
+  border-radius: 0.25rem;
+}
 .border {
   border-width: 1px;
 }
@@ -756,7 +778,7 @@ video {
   background-color: hsl(44 100% 39.4% / var(--tw-bg-opacity));
 }
 .bg-myGreyOverlay {
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(229,229,229,0.3);
 }
 .px-2 {
   padding-left: 0.5rem;
@@ -795,6 +817,12 @@ video {
 }
 .pt-6 {
   padding-top: 1.5rem;
+}
+.pl-3 {
+  padding-left: 0.75rem;
+}
+.pl-2 {
+  padding-left: 0.5rem;
 }
 .text-left {
   text-align: left;
@@ -884,6 +912,10 @@ video {
 .hover\:border-myGold:hover {
   --tw-border-opacity: 1;
   border-color: hsl(44 100% 39.4% / var(--tw-border-opacity));
+}
+
+.hover\:bg-myGreyOverlay:hover {
+  background-color: rgba(229,229,229,0.3);
 }
 
 .hover\:bg-myYellowishGold:hover {
