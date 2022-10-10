@@ -5,20 +5,34 @@ let input = document.getElementById('user-input')
 const validate = document.getElementById('validate')
 const selectCountry = document.getElementById('select-country')
 const overlay = document.getElementById('overlay')
+const HideAreaCode = document.getElementById('toggleAreaCode')
+const icnClearText = document.getElementById('icnClearText')
 
-
+HideAreaCode.addEventListener('click', function handleClickOutside(event) {
+    const box = document.getElementById('box')
+    if (!box.contains(event.target)) {
+        HideAreaCode.classList.replace('block', 'hidden')
+    }
+})
 
 btn.addEventListener('click', () => {
     menu.classList.toggle('sidemenu')
     menu.classList.toggle('w-0')
     overlay.classList.replace('hidden', 'block')
- 
+
 })
 close.addEventListener('click', () => {
     menu.classList.toggle('sidemenu')
     menu.classList.toggle('w-0')
     overlay.classList.replace('block', 'hidden')
 })
+
+function hideAreaCode() {
+    HideAreaCode.classList.replace('block', 'hidden')
+}
+function showAreaCode() {
+    HideAreaCode.classList.replace('hidden', 'block')
+}
 function borderGlowRed() {
     input.classList.replace('border-myGreyShade', 'border-myRedValidation')
     input.classList.replace('focus:border-myGold', 'focus:border-myRedValidation')
@@ -49,7 +63,7 @@ function hideUserInput(usertext) {
     if (isNaN(userInput)) {
         let getIndex = userInput.indexOf('@')
         newSubstr = firstChar + "****" + userInput.substr(getIndex)
-        localStorage.setItem('user-input',newSubstr)
+        localStorage.setItem('user-input', newSubstr)
     }
     else {
         let getInputLength = userInput.length;
@@ -57,7 +71,7 @@ function hideUserInput(usertext) {
         let first3Num = userInput.substr(0, 3)
         let last4Num = userInput.substr(lgthMinus4, getInputLength)
         newSubstr = first3Num + "****" + last4Num
-        localStorage.setItem('user-input',newSubstr)
+        localStorage.setItem('user-input', newSubstr)
     }
 }
 
@@ -66,6 +80,10 @@ function textValidation() {
     if (input.value == "") {
         hideValidate()
         borderGlowNormal()
+        hideIcnClear()
+    }
+    else{
+        showIcnClear()
     }
     if (input.value.length < 11 && !isNaN(input.value)) {
         hideValidate()
@@ -90,13 +108,13 @@ function ValidateEmail(input) {
 
     if (input.value.length == 10 && !isNaN(input.value)) {
         hideUserInput(input)
-        window.location="login-password.html"
+        window.location = "login-password.html"
         return true
 
     }
     else if (input.value.match(validRegex) && input.value.length >= 10) {
         hideUserInput(input)
-        window.location ="login-password.html"
+        window.location = "login-password.html"
         return true
 
     } else {
@@ -114,9 +132,9 @@ function validateBtn() {
 
     ValidateEmail(input);
 }
-function loadHiddenInput(){
-   document.getElementById('user-identity').innerHTML=localStorage.getItem('user-input')
-   document.getElementById('user-identity2').innerHTML=localStorage.getItem('user-input')
+function loadHiddenInput() {
+    document.getElementById('user-identity').innerHTML = localStorage.getItem('user-input')
+    document.getElementById('user-identity2').innerHTML = localStorage.getItem('user-input')
 
 }
 function sideMenuHide() {
@@ -124,3 +142,15 @@ function sideMenuHide() {
     menu.classList.toggle('w-0')
     overlay.classList.replace('block', 'hidden')
 }
+function clearText(){
+    input.value =null
+}
+function hideIcnClear(){
+    icnClearText.classList.replace('hidden', 'block')
+
+}
+function showIcnClear(){
+    icnClearText.classList.replace('block', 'hidden')
+
+}
+

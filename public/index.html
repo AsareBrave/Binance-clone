@@ -82,7 +82,7 @@
                         </g>
                     </svg></a>
                 </div>
-                <div class="flex px-4 py-4 cursor-pointer hover:bg-myGreyOverlay hover:text-myGoldButton">
+                <div class="flex px-4 py-4 cursor-pointer hover:bg-myGreyImgbackground hover:text-myGoldButton">
                     <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor" class="css-mykl4n text-myGreySvg" width="25" height="24">
                         <defs>
@@ -99,7 +99,8 @@
                         </g>
                     </svg> <span class="ml-2"> Theme</span>
                 </div>
-                <div class="flex px-4 py-4 cursor-pointer" onfocus="glow">
+                <div class="flex px-4 py-4 cursor-pointer hover:bg-myGreyImgbackground hover:text-myGoldButton"
+                    onfocus="glow">
                     <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor" class="css-mykl4n text-myGreySvg" width="24" height="24">
                         <defs>
@@ -159,12 +160,23 @@
                                 <label for="Email" class="block mb-1 text-sm">Email / Phone Number</label>
                                 <div class="flex flex-row">
                                     <select name="" id="select-country"
-                                        class="rounded-md h-12 bg-myWhite box-border border text-sm border-myGreyShade focus:outline-none focus:border-myGold hover:border-myGold w-1/5 mr-2 hidden">
+                                        class="rounded-md h-12 bg-myWhite box-border border text-sm border-myGreyShade focus:outline-none focus:border-myGold hover:border-myGold w-1/5 mr-2 hidden"
+                                        onclick="showAreaCode()">
                                         <option value="nig">+234</option>
                                     </select>
-                                    <input type="text" name="" id="user-input"
-                                        class="rounded-md h-12 border box-border text-sm border-myGreyShade focus:outline-none focus:border-myGold hover:border-myGold w-full px-4 py-2 mx-auto"
-                                        onkeyup="textValidation()">
+                                    <div class="flex flex-row w-full">
+                                        <input type="text" name="" id="user-input"
+                                            class="rounded-md h-12 border box-border text-sm border-myGreyShade focus:outline-none focus:border-myGold hover:border-myGold w-full pl-4 pr-10 py-2"
+                                            onkeyup="textValidation()">
+                                        <div class="relative  flex-row items-center hidden" onclick="clearText()" id="icnClearText">
+                                            <div class="absolute right-0 ">
+                                                <i class="fa fa-times-circle fa-lg px-4 text-myGreyMid hover:text-myDarkFooterText"
+                                                    aria-hidden="true"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <label for="" class="mt-1 box-border font-normal text-sm text-myRedValidation hidden"
                                     id="validate">Please enter a valid email or phone number</label>
@@ -254,79 +266,116 @@
         </div>
 
     </footer>
-    <!-- Pop up select menu -->
-    <section class="">
-
-        <div class="absolute px-6 w-full rounded-lg bg-myGold mx-1 box-border top-1/2">
-            <div class="flex flex-row justify-between box-border">
-                <h1 class="flex flex-col justify-center text-xl">Select area code</h1>
-                <div class=" px-4 py-4 text-myGreySvg cursor-pointer" id="close-btn"><svg
-                        xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor" id="mobile_header_menu_burger_close" class="css-1sk755i" width="24"
-                        height="24">
-                        <defs>
-                            <symbol viewBox="0 0 24 24" id="close-f">
+    <!-- Pop up areacode select menu menu -->
+    <div class="absolute hidden top-0 left-0 right-0 bottom-0 z-[999]" id="toggleAreaCode">
+        <div class="h-screen w-screen bg-myGreyOverlay flex items-end  md:items-center md:justify-center">
+            <div class="rounded-xl bg-white box-border w-full h-[440px]  md:w-[342px]" id="box">
+                <div class="flex flex-row justify-between px-6 box-border">
+                    <h1 class="flex flex-col justify-center text-xl">Select area code</h1>
+                    <div class=" px-4 py-4 text-myGreySvg cursor-pointer" onclick="hideAreaCode()"><svg
+                            xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" id="mobile_header_menu_burger_close" class="css-1sk755i" width="24"
+                            height="24">
+                            <defs>
+                                <symbol viewBox="0 0 24 24" id="close-f">
+                                    <path
+                                        d="M6.69806 4.57538L4.57674 6.6967L9.88004 12L4.57674 17.3033L6.69806 19.4246L12.0014 14.1213L17.3047 19.4246L19.426 17.3033L14.1227 12L19.426 6.6967L17.3047 4.57538L12.0014 9.87868L6.69806 4.57538Z"
+                                        fill="#1E2329"></path>
+                                </symbol>
+                            </defs>
+                            <g fill="#707A8A">
                                 <path
                                     d="M6.69806 4.57538L4.57674 6.6967L9.88004 12L4.57674 17.3033L6.69806 19.4246L12.0014 14.1213L17.3047 19.4246L19.426 17.3033L14.1227 12L19.426 6.6967L17.3047 4.57538L12.0014 9.87868L6.69806 4.57538Z"
                                     fill="#1E2329"></path>
-                            </symbol>
-                        </defs>
-                        <g fill="#707A8A">
-                            <path
-                                d="M6.69806 4.57538L4.57674 6.6967L9.88004 12L4.57674 17.3033L6.69806 19.4246L12.0014 14.1213L17.3047 19.4246L19.426 17.3033L14.1227 12L19.426 6.6967L17.3047 4.57538L12.0014 9.87868L6.69806 4.57538Z"
-                                fill="#1E2329"></path>
-                        </g>
-                    </svg></a>
+                            </g>
+                        </svg></a>
+                    </div>
                 </div>
-            </div>
-            <div class="px-2">
-                <input type="text" name="" id=""
-                    class="rounded-md h-12 border box-border text-sm border-myGreyShade focus:outline-none focus:border-myGold hover:border-myGold w-full px-4 py-1 mx-auto"
-                    placeholder="Search">
-            </div>
+                <div class="px-8">
+                    <input type="text" name="" id=""
+                        class="rounded-md h-12 border box-border text-sm border-myGreyShade focus:outline-none focus:border-myGold hover:border-myGold w-full px-4 py-1 mx-auto"
+                        placeholder="Search">
+                </div>
+                <ul class="pt-6 overflow-y-scroll  max-h-[320px]">
+                    <li class="flex flex-row justify-between py-3 hover:bg-myGreyImgbackground px-6">
+                        <div class="flex items-center">
+                            <div class="rounded-full"><img src="../src/img/flag-of-Afghanistan.png" alt=""
+                                    class="rounded-full h-8 w-8"></div>
+                            <h1 class="pl-2">Andora</h1>
+                        </div>
+                        <div>
+                            <h1>+376</h1>
+                        </div>
+                    </li>
+                    <li class="flex flex-row justify-between py-3 hover:bg-myGreyImgbackground px-6">
+                        <div class="flex items-center">
+                            <div class="rounded-full"><img src="../src/img/flag-of-Afghanistan.png" alt=""
+                                    class="rounded-full h-8 w-8"></div>
+                            <h1 class="pl-2">Andora</h1>
+                        </div>
+                        <div>
+                            <h1>+376</h1>
+                        </div>
+                    </li>
+                    <li class="flex flex-row justify-between py-3 hover:bg-myGreyImgbackground px-6">
+                        <div class="flex items-center">
+                            <div class="rounded-full"><img src="../src/img/flag-of-Afghanistan.png" alt=""
+                                    class="rounded-full h-8 w-8"></div>
+                            <h1 class="pl-2">Andora</h1>
+                        </div>
+                        <div>
+                            <h1>+376</h1>
+                        </div>
+                    </li>
+                    <li class="flex flex-row justify-between py-3 hover:bg-myGreyImgbackground px-6">
+                        <div class="flex items-center">
+                            <div class="rounded-full"><img src="../src/img/flag-of-Afghanistan.png" alt=""
+                                    class="rounded-full h-8 w-8"></div>
+                            <h1 class="pl-2">Andora</h1>
+                        </div>
+                        <div>
+                            <h1>+376</h1>
+                        </div>
+                    </li>
+                    <li class="flex flex-row justify-between py-3 hover:bg-myGreyImgbackground px-6">
+                        <div class="flex items-center">
+                            <div class="rounded-full"><img src="../src/img/flag-of-Afghanistan.png" alt=""
+                                    class="rounded-full h-8 w-8"></div>
+                            <h1 class="pl-2">Andora</h1>
+                        </div>
+                        <div>
+                            <h1>+376</h1>
+                        </div>
+                    </li>
 
-            <div class="flex flex-row justify-between px-2 py-2">
-                <div class="flex items-center">
-                    <div class="rounded-full"><img src="../src/img/flag-of-Afghanistan.png" alt=""
-                            class="rounded-full h-8 w-8"></div>
-                    <h1 class="pl-2">Andora</h1>
-                </div>
-                <div>
-                    <h1>+376</h1>
-                </div>
-            </div>
-            <div class="flex flex-row justify-between px-2 my-2">
-                <div class="flex items-center">
-                    <div class="rounded-full"><img src="../src/img/flag-of-Afghanistan.png" alt=""
-                            class="rounded-full h-8 w-8"></div>
-                    <h1 class="pl-2">Andora</h1>
-                </div>
-                <div>
-                    <h1>+376</h1>
-                </div>
-            </div><div class="flex flex-row justify-between px-2 my-2">
-                <div class="flex items-center">
-                    <div class="rounded-full"><img src="../src/img/flag-of-Afghanistan.png" alt=""
-                            class="rounded-full h-8 w-8"></div>
-                    <h1 class="pl-2">Andora</h1>
-                </div>
-                <div>
-                    <h1>+376</h1>
-                </div>
-            </div><div class="flex flex-row justify-between px-2 my-2">
-                <div class="flex items-center">
-                    <div class="rounded-full"><img src="../src/img/flag-of-Afghanistan.png" alt=""
-                            class="rounded-full h-8 w-8"></div>
-                    <h1 class="pl-2">Andora</h1>
-                </div>
-                <div>
-                    <h1>+376</h1>
-                </div>
+                    <li class="flex flex-row justify-between py-3 hover:bg-myGreyImgbackground px-6">
+                        <div class="flex items-center">
+                            <div class="rounded-full"><img src="../src/img/flag-of-Afghanistan.png" alt=""
+                                    class="rounded-full h-8 w-8"></div>
+                            <h1 class="pl-2">Andora</h1>
+                        </div>
+                        <div>
+                            <h1>+376</h1>
+                        </div>
+                    </li>
+
+                    <li class="flex flex-row justify-between py-3 hover:bg-myGreyImgbackground px-6">
+                        <div class="flex items-center">
+                            <div class="rounded-full"><img src="../src/img/flag-of-Afghanistan.png" alt=""
+                                    class="rounded-full h-8 w-8"></div>
+                            <h1 class="pl-2">Andora</h1>
+                        </div>
+                        <div>
+                            <h1>+376</h1>
+                        </div>
+                    </li>
+
+                </ul>
             </div>
         </div>
+    </div>
 
-        <!-- Overlay -->
-    </section>
+    <!-- Overlay -->
     <div class="fixed hidden top-0 left-0 right-0 bottom-0 w-screen h-screen bg-myGreyOverlay" id="overlay"
         onclick="sideMenuHide()">
     </div>
