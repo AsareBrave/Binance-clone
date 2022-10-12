@@ -7,8 +7,6 @@ const selectCountry = document.getElementById('select-country')
 const overlay = document.getElementById('overlay')
 const HideAreaCode = document.getElementById('toggleAreaCode')
 const icnClearText = document.getElementById('icnClearText')
-let password = document.getElementById('password')
-const hideIcnClearPasswordText = document.getElementById('icnClearPasswordText')
 
 // HideAreaCode.addEventListener('click', function handleClickOutside(event) {
 //     const box = document.getElementById('box')
@@ -84,35 +82,6 @@ function hideIcnClear() {
 }
 function showIcnClear() {
     icnClearText.classList.replace('hidden', 'block')
-    hidePasswordIcn()
-}
-
-function hidePasswordIcn() {
-    hideIcnClearPasswordText.classList.replace('block', 'hidden')
-}
-function showPasswordInc() {
-    hideIcnClearPasswordText.classList.replace('hidden', 'block')
-}
-
-function clearPasswordText() {
-    password.value = ""
-    hidePasswordIcn();
-}
-
-function showPasswordIcnFocus() {
-    if (password.value.length != "") {
-        showPasswordInc();
-    } else {
-        hidePasswordIcn();
-    }
-}
-
-function validatePassword() {
-    if (password.value.length > 0) {
-        showPasswordInc();
-    }else{
-        hidePasswordIcn();
-    }
 }
 
 function hideUserInput(usertext) {
@@ -133,7 +102,6 @@ function hideUserInput(usertext) {
         localStorage.setItem('user-input', newSubstr)
     }
 }
-
 
 function textValidation() {
     if (input.value == "") {
