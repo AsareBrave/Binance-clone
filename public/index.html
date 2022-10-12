@@ -167,10 +167,11 @@
                                     <div class="flex flex-row w-full">
                                         <input type="text" name="" id="user-input"
                                             class="rounded-md h-12 border box-border text-sm border-myGreyShade focus:outline-none focus:border-myGold hover:border-myGold w-full pl-4 pr-10 py-2"
-                                            onkeyup="textValidation()">
-                                        <div class="relative  flex-row items-center hidden" onclick="clearText()" id="icnClearText">
+                                            onkeyup="textValidation()" onfocus="ShowIcnUserInputText()">
+                                        <div class="relative flex flex-row items-center hidden" onclick="clearText()"
+                                            id="icnClearText">
                                             <div class="absolute right-0 ">
-                                                <i class="fa fa-times-circle fa-lg px-4 text-myGreyMid hover:text-myDarkFooterText"
+                                                <i class="fa fa-times-circle fa-lg px-4 text-myIconGrey hover:text-myGreyMid"
                                                     aria-hidden="true"></i>
                                             </div>
 

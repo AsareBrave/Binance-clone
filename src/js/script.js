@@ -7,13 +7,15 @@ const selectCountry = document.getElementById('select-country')
 const overlay = document.getElementById('overlay')
 const HideAreaCode = document.getElementById('toggleAreaCode')
 const icnClearText = document.getElementById('icnClearText')
+let password = document.getElementById('password')
+const hideIcnClearPasswordText = document.getElementById('icnClearPasswordText')
 
-HideAreaCode.addEventListener('click', function handleClickOutside(event) {
-    const box = document.getElementById('box')
-    if (!box.contains(event.target)) {
-        HideAreaCode.classList.replace('block', 'hidden')
-    }
-})
+// HideAreaCode.addEventListener('click', function handleClickOutside(event) {
+//     const box = document.getElementById('box')
+//     if (!box.contains(event.target)) {
+//         HideAreaCode.classList.replace('block', 'hidden')
+//     }
+// })
 
 btn.addEventListener('click', () => {
     menu.classList.toggle('sidemenu')
@@ -55,6 +57,63 @@ function hideSelectCountry() {
 function showValidate() {
     validate.classList.replace('hidden', 'block')
 }
+function ShowIcnUserInputText() {
+    if (input.value.length >= 1) {
+        showIcnClear()
+    }
+
+}
+
+function loadHiddenInput() {
+    document.getElementById('user-identity').innerHTML = localStorage.getItem('user-input')
+    document.getElementById('user-identity2').innerHTML = localStorage.getItem('user-input')
+
+}
+function sideMenuHide() {
+    menu.classList.toggle('sidemenu')
+    menu.classList.toggle('w-0')
+    overlay.classList.replace('block', 'hidden')
+}
+function clearText() {
+    input.value = null
+    hideIcnClear();
+    hideSelectCountry();
+}
+function hideIcnClear() {
+    icnClearText.classList.replace('block', 'hidden')
+}
+function showIcnClear() {
+    icnClearText.classList.replace('hidden', 'block')
+    hidePasswordIcn()
+}
+
+function hidePasswordIcn() {
+    hideIcnClearPasswordText.classList.replace('block', 'hidden')
+}
+function showPasswordInc() {
+    hideIcnClearPasswordText.classList.replace('hidden', 'block')
+}
+
+function clearPasswordText() {
+    password.value = ""
+    hidePasswordIcn();
+}
+
+function showPasswordIcnFocus() {
+    if (password.value.length != "") {
+        showPasswordInc();
+    } else {
+        hidePasswordIcn();
+    }
+}
+
+function validatePassword() {
+    if (password.value.length > 0) {
+        showPasswordInc();
+    }else{
+        hidePasswordIcn();
+    }
+}
 
 function hideUserInput(usertext) {
     let userInput = input.value
@@ -82,7 +141,7 @@ function textValidation() {
         borderGlowNormal()
         hideIcnClear()
     }
-    else{
+    else {
         showIcnClear()
     }
     if (input.value.length < 11 && !isNaN(input.value)) {
@@ -132,25 +191,5 @@ function validateBtn() {
 
     ValidateEmail(input);
 }
-function loadHiddenInput() {
-    document.getElementById('user-identity').innerHTML = localStorage.getItem('user-input')
-    document.getElementById('user-identity2').innerHTML = localStorage.getItem('user-input')
 
-}
-function sideMenuHide() {
-    menu.classList.toggle('sidemenu')
-    menu.classList.toggle('w-0')
-    overlay.classList.replace('block', 'hidden')
-}
-function clearText(){
-    input.value =null
-}
-function hideIcnClear(){
-    icnClearText.classList.replace('hidden', 'block')
-
-}
-function showIcnClear(){
-    icnClearText.classList.replace('block', 'hidden')
-
-}
 

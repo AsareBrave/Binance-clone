@@ -25,7 +25,8 @@ module.exports = {
         myGreyImgbackground: 'rgb(245, 245, 245)',
         myGreySvg: 'rgb(112, 112, 138)',
         myRedValidation: 'rgb(207, 48, 74)',
-        myGreyOverlay: 'rgba(0,0,0,0.5)'
+        myGreyOverlay: 'rgba(0,0,0,0.5)',
+        myIconGrey: 'rgb(183, 189, 198)'
       },
     },
     plugins: [],
