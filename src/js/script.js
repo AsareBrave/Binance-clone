@@ -8,12 +8,11 @@ const overlay = document.getElementById('overlay')
 const HideAreaCode = document.getElementById('toggleAreaCode')
 const icnClearText = document.getElementById('icnClearText')
 
-// HideAreaCode.addEventListener('click', function handleClickOutside(event) {
-//     const box = document.getElementById('box')
-//     if (!box.contains(event.target)) {
-//         HideAreaCode.classList.replace('block', 'hidden')
-//     }
-// })
+ HideAreaCode.addEventListener('click', function handleClickOutside(event) {
+     const box = document.getElementById('box')
+     if (!box.contains(event.target)) {
+         HideAreaCode.classList.replace('block', 'hidden')     }
+ })
 
 btn.addEventListener('click', () => {
     menu.classList.toggle('sidemenu')
